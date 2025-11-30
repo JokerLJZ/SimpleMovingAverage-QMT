@@ -1,0 +1,2 @@
+# SimpleMovingAverage-QMT
+通过MiniQMT实现基于MA20d的SMA实盘交易策略
