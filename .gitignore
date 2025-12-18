@@ -1,2 +1,4 @@
 TradePrivate.py
-ConfigPrivate.py
+config.py
+ticker.csv
+ticker_sql.csv
