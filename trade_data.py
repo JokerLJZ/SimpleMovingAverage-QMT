@@ -26,7 +26,11 @@ class TradeData:
         self.db = create_engine(config.MYSQL_CONNECTION_STRING)
 
     def fetch_data(self):
-        """Fetch trade data for the specified tickers and date range. and store it in the database."""
+        """
+        Fetch trade data for the specified tickers and date range.
+        and store it in the database.
+        Returns:
+            list of pd.DataFrame: List of dataframes containing trade data for each ticker."""
         dfs = [yf.download(
             ticker,
             group_by="Ticker",
@@ -43,6 +47,7 @@ class TradeData:
 # Example usage:
 if __name__ == "__main__":
     trade_data = TradeData(
+        ticker=config.TICKERS,
         start_date="1990-01-01",
         end_date=pd.Timestamp.today().strftime('%Y-%m-%d'))
     trade_data.fetch_data()

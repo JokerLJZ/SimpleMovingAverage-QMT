@@ -1,10 +1,13 @@
+"""
+Docstring for Trade
+"""
+import random
 from xtquant import xttrader
 from xtquant.xttype import StockAccount
-import random
 import config
 
-qmt_path = config.qmt_path
-account = config.account
+qmt_path = config.QMT_PATH
+account = config.ACCOUNT
 
 session_id = int(random.randint(100000, 999999))
 
